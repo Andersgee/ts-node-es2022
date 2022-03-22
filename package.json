@@ -1,0 +1,19 @@
+{
+  "name": "ts-node-with-es2022",
+  "type": "module",
+  "version": "0.0.1",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon --watch './**/*.ts' --exec 'yarn run start' ./src/index.ts",
+    "start": "node --experimental-specifier-resolution=node --loader ts-node/esm/transpile-only ./src/index.ts"
+  },
+  "dependencies": {
+    "node-fetch": "^3.2.3",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.2",
+    "nodemon": "^2.0.15"
+  },
+  "imports": {
+    "#src/*": "./src/*"
+  }
+}
